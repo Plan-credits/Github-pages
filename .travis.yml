@@ -1,9 +1,9 @@
 language: python 
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: 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 # Set in the settings page of your repository, as a secure variable
-  keep_history: true
+  provider: pages:git
+  edge: true
+  token:
+    secure: "SU8dtO7G/TKyxHDoP3dw5Lt+NaiL/3f0hc8F+5gzQOgGgrPCGrF2hAZaa18avramrrvz67jZBRdi+6hjbElVUmHggxkCAbz6t8O4PrWaJyuXwLrDJmkAvy2QUKdfuzREbORDtRde1DSyC5qnOUo9D+5LgYBsu70kcUgbco872U+O91zYbKvsOEifQSgtr00dgDmVD6Nttbv47YlRoMZiVAK+dPoZ7HyhtFbS71by81cazZLGBBTvCSPTlU95RJavvyDPqZDrA+Iq4NHijwyWrsczKoy2N9pxvMFe38IAt7QL7bsYOcDR3TFSXC5nYUXPcJv0YzixMgd1t1zvhjxlUjpKepOl1AWy1IzcKBokKdREPX4Lm0nF1baoSjDRLElCTKYrr/gHvkFfzEQnBrvaD9wir2fr3srCSHdQGBsl+WY0ry3bnnkCskpW9aID/T8xOdO5eneJ8HUCIFQZXZgbaaeS1fD65ys0miMAW4pPT4WVJ87kRvyUaUgpKt/XhNheddC6hYOuQWsGMBcXwoT1QMr2CLIHw06WEVtKwKLtsR7laMzK/sWHxLScHwLO2JZ9zRZDbUorMWQ1GQiZw0oPaSLl5FPbRIyoTTqb+l5hoSxz7els/kLaw4H4QCPDli65t4g8Mcm174SXFv2LraXQ+jq3cR2kkXcKVIN1H+VJZlU="
   on:
     branch: main
     script:
