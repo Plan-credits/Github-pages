@@ -1,0 +1,9 @@
+language: python 
+deploy:
+  provider: pages:git
+  edge: true
+  token: $KEY_PAIR
+  on:
+    branch: main
+script:
+  - echo "Hello_world"
