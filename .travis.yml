@@ -2,7 +2,7 @@ language: python
 deploy:
   provider: pages:git
   edge: true
-  token: $GITHUB_TOKEN
+  token: $KEY_PAIR
   on:
     branch: main
 script:
