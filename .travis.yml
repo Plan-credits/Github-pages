@@ -7,4 +7,4 @@ deploy:
   on:
     branch: main
     script:
-      - python hello_world.py
+      - echo "Hello_world"
