@@ -1,7 +1,4 @@
-language: ruby
-rvm:
-- 2.2
-- 2.3   
+language: python 
 deploy:
   provider: pages
   skip_cleanup: true
@@ -10,4 +7,4 @@ deploy:
   on:
     branch: main
     script:
-      - ruby hello_world.rb
+      - python hello_world.py
