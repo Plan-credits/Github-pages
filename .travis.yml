@@ -4,6 +4,6 @@ deploy:
   edge: true
   token: $KEY_PAIR
   on:
-    branch: main
+    branch: gh-pages
 script:
   - echo "Hello_world"
