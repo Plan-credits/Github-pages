@@ -1,9 +1,8 @@
-language: python 
+language: python
 deploy:
   provider: pages
-  edge: true
-  token: $KEY_PAIR
-  on:
+  edge:
     branch: v2.0.3-beta.4
+  token: $KEY_PAIR
 script:
-  - echo "Hello_world"
+  - echo "Hello world"
