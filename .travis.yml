@@ -4,5 +4,7 @@ deploy:
   edge:
     branch: v2.0.3-beta.4
   token: $KEY_PAIR
+  on:
+    branch: main
 script:
   - echo "Hello world"
