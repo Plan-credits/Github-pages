@@ -1,21 +1,18 @@
 language: python
 python:
-  - "3.6"  # or your preferred version
-
-rvm:
-  - 2.7  # 👈 Ensure compatible Ruby for GitHub Pages deploy
-
-install:
-  - pip install -r requirements.txt || true  # skip if no requirements
+  - "3.6"
 
 script:
   - echo "Hello world"
 
+before_deploy:
+  - mkdir -p public
+  - echo "<h1>Hello from Travis!</h1>" > public/index.html
+
 deploy:
   provider: pages
   skip_cleanup: true
-  token: $KEY_PAIR  # GitHub token set in Travis CI settings
-  local_dir: public  # folder to deploy; change as needed
+  token: $KEY_PAIR
+  local_dir: public
   on:
     branch: main
-
