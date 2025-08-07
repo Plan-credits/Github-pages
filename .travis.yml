@@ -1,10 +1,21 @@
 language: python
-deploy:
-  provider: pages
-  edge:
-    branch: v2.0.3-beta.4
-  token: $KEY_PAIR
-  on:
-    branch: main
+python:
+  - "3.6"  # or your preferred version
+
+rvm:
+  - 2.7  # 👈 Ensure compatible Ruby for GitHub Pages deploy
+
+install:
+  - pip install -r requirements.txt || true  # skip if no requirements
+
 script:
   - echo "Hello world"
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  token: $KEY_PAIR  # GitHub token set in Travis CI settings
+  local_dir: public  # folder to deploy; change as needed
+  on:
+    branch: main
+
